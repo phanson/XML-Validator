@@ -1,0 +1,9 @@
+bin/
+Bin/
+obj/
+Obj/
+*.suo
+*.user
+*.cache
+*.swp
+
