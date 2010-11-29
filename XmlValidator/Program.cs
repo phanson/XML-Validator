@@ -52,7 +52,11 @@ namespace XmlValidator
                 }
                 else
                 {
-                    Console.WriteLine("\r\n{0}: validation failed {1}\r\n", file, validator.ErrorMessage);
+                    Console.WriteLine("\r\n{0}: validation failed\r\n", file);
+                    foreach(var e in validator.Errors)
+                    {
+                        Console.WriteLine("Line {0} Col {1}: {2}", e.Line, e.Column, e.Message);
+                    }
                     allValid = false;
                 }
             }
